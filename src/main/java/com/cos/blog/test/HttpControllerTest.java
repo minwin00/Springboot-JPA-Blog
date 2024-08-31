@@ -32,7 +32,7 @@ public class HttpControllerTest {
 	
 	//http://localhost:8080/http/delete
 	@DeleteMapping("/http/delete")
-	public String deleteTest() {
+	public String deleteTest(@RequestBody Member m) {
 		return "delete 요청: " +m.getId()+","+m.getUsername()+","+m.getPassword()+","+m.getEmail();
 	}
 }
